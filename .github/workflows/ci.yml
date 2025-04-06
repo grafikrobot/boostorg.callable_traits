@@ -26,7 +26,7 @@ jobs:
             boost-lib: callable_traits
             scan-dirs: test
           compilers: |
-            gcc >= 4.7
+            gcc >= 4.8
             clang >= 3.5
             msvc >= 14.1
             apple-clang *
