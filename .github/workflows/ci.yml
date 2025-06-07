@@ -179,7 +179,7 @@ jobs:
             llvm_ver: "7"
             toolset: "clang"
             compiler: "clang++-7"
-            cxxstd: "11,14,1z,17,2a"
+            cxxstd: "11,14,1z,17"
           - name: "clang 8"
             packages: "clang-8"
             os: "ubuntu-latest"
@@ -188,7 +188,7 @@ jobs:
             llvm_ver: "8"
             toolset: "clang"
             compiler: "clang++-8"
-            cxxstd: "11,14,17,2a"
+            cxxstd: "11,14,17"
           - name: "clang 9"
             packages: "clang-9"
             os: "ubuntu-latest"
@@ -350,13 +350,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - toolset: msvc-14.1
-            cxxstd: "11,14,17"
-            arch: 32
-            os: windows-2019
           - toolset: msvc-14.2
             cxxstd: "11,14,17,latest"
             os: windows-2019
+          - toolset: msvc-14.3
+            cxxstd: "11,14,17,20,latest"
+            os: windows-2022
 
     runs-on: ${{matrix.os}}
 
